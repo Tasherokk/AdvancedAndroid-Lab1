@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- No variables needed -->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.HomeFragment">
+
+        <!-- Кнопка 1 -->
+        <Button
+            android:id="@+id/btnCalendarEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Calendar Events"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="100dp" />
+
+        <!-- Кнопка 2 -->
+        <Button
+            android:id="@+id/btnShareStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share Image to Instagram Story"
+            app:layout_constraintTop_toBottomOf="@id/btnCalendarEvents"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp" />
+
+        <!-- Кнопка 3 -->
+        <Button
+            android:id="@+id/btnMusicService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music Foreground Service"
+            app:layout_constraintTop_toBottomOf="@id/btnShareStory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp" />
+
+        <!-- Кнопка 4 -->
+        <Button
+            android:id="@+id/btnAirplaneMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Airplane Mode Receiver"
+            app:layout_constraintTop_toBottomOf="@id/btnMusicService"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

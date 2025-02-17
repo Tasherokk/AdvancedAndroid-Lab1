@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.lab1.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_shareStoryFragment"
+            app:destination="@id/shareStoryFragment"/>
+        <action
+            android:id="@+id/action_homeFragment_to_musicServiceFragment"
+            app:destination="@id/musicServiceFragment"/>
+        <action
+            android:id="@+id/action_homeFragment_to_airplaneModeFragment"
+            app:destination="@id/airplaneModeFragment"/>
+        <action
+            android:id="@+id/action_homeFragment_to_calendarEventsFragment"
+            app:destination="@id/calendarEventsFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/shareStoryFragment"
+        android:name="com.example.lab1.fragments.ShareStoryFragment"
+        android:label="ShareStoryFragment" />
+
+    <fragment
+        android:id="@+id/musicServiceFragment"
+        android:name="com.example.lab1.fragments.MusicServiceFragment"
+        android:label="MusicServiceFragment" />
+
+    <fragment
+        android:id="@+id/airplaneModeFragment"
+        android:name="com.example.lab1.fragments.AirplaneModeFragment"
+        android:label="AirplaneModeFragment" />
+
+    <fragment
+        android:id="@+id/calendarEventsFragment"
+        android:name="com.example.lab1.fragments.CalendarEventsFragment"
+        android:label="CalendarEventsFragment" />
+
+</navigation>
