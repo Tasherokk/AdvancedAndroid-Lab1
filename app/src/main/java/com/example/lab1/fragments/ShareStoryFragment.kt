@@ -3,14 +3,9 @@ package com.example.lab1.fragments
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.graphics.Bitmap
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
-import android.provider.OpenableColumns
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,11 +14,11 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import com.example.lab1.BuildConfig
+import com.example.lab1.R
 import com.example.lab1.databinding.FragmentShareStoryBinding
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
-import java.io.InputStream
 
 class ShareStoryFragment : Fragment() {
 
@@ -65,7 +60,7 @@ class ShareStoryFragment : Fragment() {
     }
 
     private fun shareToInstagramStory(imageUri: Uri) {
-        // We must convert the content Uri to a FileProvider Uri if needed.
+
         val backgroundAssetUri = copyUriToCache(imageUri) ?: run {
             Toast.makeText(requireContext(), "Failed to process image", Toast.LENGTH_SHORT).show()
             return
@@ -73,8 +68,13 @@ class ShareStoryFragment : Fragment() {
 
         // Instagram story deep link
         val intent = Intent("com.instagram.share.ADD_TO_STORY")
+
+        // Attach your App ID to the intent
+        val sourceApplication = getString(R.string.facebook_app_id) // This is your application's FB ID
+        intent.putExtra("source_application", sourceApplication)
+
         intent.setDataAndType(backgroundAssetUri, "image/*")
-        intent.putExtra("interactive_asset_uri", backgroundAssetUri) //adds background to story
+        intent.putExtra("interactive_asset_uri", backgroundAssetUri)
 
         // Grant temporary read permission to Instagram
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)

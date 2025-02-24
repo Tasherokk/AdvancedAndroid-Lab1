@@ -58,6 +58,11 @@
         // Удобная работа с URI (если нужно копировать файлы, например, при шаринге картинки)
         implementation(libs.androidx.documentfile)
 
+        // Facebook Android SDK (базовый + модуль share)
+        implementation(libs.facebook.core)
+        implementation(libs.facebook.share)
+        implementation(libs.facebook.android.sdk)
+
 
         implementation(libs.androidx.core.ktx)
         implementation(libs.androidx.appcompat)

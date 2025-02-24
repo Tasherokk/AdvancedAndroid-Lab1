@@ -1,6 +1,8 @@
 [versions]
 agp = "8.6.0"
 documentfile = "1.0.1"
+facebookAndroidSdk = "latest.release"
+facebookCore = "16.0.1"
 kotlin = "1.9.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -19,6 +21,9 @@ androidx-documentfile = { module = "androidx.documentfile:documentfile", version
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationUiKtx" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationUiKtx" }
 androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+facebook-android-sdk = { module = "com.facebook.android:facebook-android-sdk", version.ref = "facebookAndroidSdk" }
+facebook-core = { module = "com.facebook.android:facebook-core", version.ref = "facebookCore" }
+facebook-share = { module = "com.facebook.android:facebook-share", version.ref = "facebookCore" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
